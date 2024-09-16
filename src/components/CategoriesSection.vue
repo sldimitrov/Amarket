@@ -31,6 +31,12 @@ import duck from '../assets/accessories/duck.webp'
     justify-content: space-between;
   }
 
+  @media only screen and (max-width: 880px) {
+    #card-collection {
+      flex-direction: column;
+    }
+  }
+
   h2 {
     font-size: 27px;
     margin-top: 30px;

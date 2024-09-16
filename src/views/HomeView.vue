@@ -1,6 +1,7 @@
 <script setup>
 import LastlyAdded from '@/components/LastlyAdded.vue';
 import ContactsUs from '@/components/ContactsUs.vue';
+import FooterLine from '@/components/FooterLine.vue';
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import ContactsUs from '@/components/ContactsUs.vue';
     <categories-section />
     <lastly-added />
     <contacts-us />
+    <footer-line />
   </div>
 </template>
 

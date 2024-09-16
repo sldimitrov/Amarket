@@ -38,12 +38,6 @@ const props = defineProps(['img', 'title', 'subtitle', 'path'])
     }
   }
 
-  @media only screen and (max-width: 880px) {
-    #card-collection {
-      flex-direction: column;
-    }
-  }
-
   .card {
     margin: 5px;
   }
