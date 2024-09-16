@@ -1,4 +1,5 @@
 <script setup>
+
 </script>
 
 <template>
@@ -7,6 +8,9 @@
       Car Accessories
     </h1>
     <ul>
+      <li>
+        Home
+      </li>
       <li>
         Interior
       </li>
@@ -22,16 +26,17 @@
 
 <style scoped>
   header {
+    color: black;
     display: flex;
     align-items: center;
-    background: rgb(61, 11, 52);
     justify-content: space-around;
+    box-shadow: 0 0 6px #64646433;
     width: 100%;
     height: 70px;
   }
   ul {
     display: flex;
-    width: 16em;
+    width: 17em;
     height: 30px;
     align-items: end;
     justify-content: space-around;
