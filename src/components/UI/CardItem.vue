@@ -3,7 +3,7 @@ import Card from 'primevue/card';
 import Button from 'primevue/button'
 import { defineProps } from 'vue';
 
-const props = defineProps(['img', 'title', 'subtitle'])
+const props = defineProps(['img', 'title', 'subtitle', 'path'])
 </script>
 
 <template>
@@ -11,31 +11,21 @@ const props = defineProps(['img', 'title', 'subtitle'])
     <template #header>
         <img alt="user header" :src="img" />
     </template>
-    <template #title>{{props.title}}</template>
-    <template #subtitle>{{props.subtitle}}</template>
+    <template #title><p class="card-text">{{props.title}}</p></template>
+    <template #subtitle><p class="card-text">{{props.subtitle}}</p></template>
     <template #footer>
-      <div class="flex gap-4 mt-1">
-        <Button label="Review" class="w-full" />
+      <div id="btn-ctn" class="flex gap-4 mt-1">
+        <Button id="reviewBtn" class="w-full">
+          <router-link id="review-btn-txt" :to="{ name: props.path}">
+            Review
+          </router-link>
+        </Button>
       </div>
     </template>
   </Card> 
 </template>
 
 <style scoped>
-  #categories {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #card-collection {
-    margin-top: 15px;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-  }
-
   @media only screen and (max-width: 1270px) and (min-width: 881px) {
     .card {
       max-width: 280px;
@@ -57,13 +47,28 @@ const props = defineProps(['img', 'title', 'subtitle'])
   .card {
     margin: 5px;
   }
+
+  .card-text {
+    margin: 0px;
+    text-align: center;
+  }
+
+  #reviewBtn {
+    width: 55%;
+  }
+
+  #btn-ctn {
+    display: flex;
+    justify-content: center;
+  }
+
+  #review-btn-txt {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+  }
   
   img {
     width: 100%;
-  }
-
-  h2 {
-    margin-top: 30px;
-    color: black;
   }
 </style>

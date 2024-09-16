@@ -1,10 +1,10 @@
 <script setup>
-
+import HeaderElement from './components/HeaderElement.vue';
 </script>
 
 <template>
   <div>
-    <header-element />
+    <HeaderElement />
     <router-view />
   </div>
 </template>

@@ -9,9 +9,9 @@ import duck from '../assets/accessories/duck.webp'
   <div id="categories">
   <h2>Categories</h2>
   <div id="card-collection">
-    <CardItem :img="steeringWheel" title="Interior" subtitle="Car Accessories"/>
-    <CardItem :img="phoneHolder" title="Exterior" subtitle="Car Accessories"/>
-    <CardItem :img="duck" title="Additional Stuff" subtitle="Car Accessories"/>
+    <CardItem :img="steeringWheel" title="Interior" subtitle="Car Accessories" path="Interior"/>
+    <CardItem :img="phoneHolder" title="Exterior" subtitle="Car Accessories" path="Exterior"/>
+    <CardItem :img="duck" title="Additional Stuff" subtitle="Car Accessories" path="Interior"/>
   </div>
 </div>
 </template>
@@ -31,33 +31,8 @@ import duck from '../assets/accessories/duck.webp'
     justify-content: space-between;
   }
 
-  @media only screen and (max-width: 1270px) and (min-width: 881px) {
-    .card {
-      max-width: 280px;
-    }
-  }
-
-  @media only screen and (max-width: 500px) {
-    .card {
-      max-width: 250px;
-    }
-  }
-
-  @media only screen and (max-width: 880px) {
-    #card-collection {
-      flex-direction: column;
-    }
-  }
-
-  .card {
-    margin: 5px;
-  }
-  
-  img {
-    width: 100%;
-  }
-
   h2 {
+    font-size: 27px;
     margin-top: 30px;
     color: black;
   }
