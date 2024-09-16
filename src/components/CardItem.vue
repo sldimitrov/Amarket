@@ -18,8 +18,7 @@ import duck from '../assets/accessories/duck.webp'
     <template #subtitle>Car Accessories</template>
     <template #footer>
       <div class="flex gap-4 mt-1">
-        <!-- <Button label="Cancel" severity="secondary" outlined class="w-full" /> -->
-        <Button label="Purchase" class="w-full" />
+        <Button label="Review" class="w-full" />
       </div>
     </template>
   </Card>
@@ -31,8 +30,7 @@ import duck from '../assets/accessories/duck.webp'
     <template #subtitle>Car Accessories</template>
     <template #footer>
       <div class="flex gap-4 mt-1">
-        <!-- <Button label="Cancel" severity="secondary" outlined class="w-full" /> -->
-        <Button label="Purchase" class="w-full" />
+        <Button label="Review" class="w-full" />
       </div>
     </template>
   </Card>
@@ -44,8 +42,7 @@ import duck from '../assets/accessories/duck.webp'
     <template #subtitle>Car Accessories</template>
     <template #footer>
       <div class="flex gap-4 mt-1">
-        <!-- <Button label="Cancel" severity="secondary" outlined class="w-full" /> -->
-        <Button label="Purchase" class="w-full" />
+        <Button label="Review" class="w-full" />
       </div>
     </template>
   </Card>
@@ -71,6 +68,12 @@ import duck from '../assets/accessories/duck.webp'
   @media only screen and (max-width: 1270px) and (min-width: 881px) {
     .card {
       max-width: 280px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .card {
+      max-width: 250px;
     }
   }
 

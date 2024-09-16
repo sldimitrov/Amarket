@@ -44,6 +44,21 @@ import Button from 'primevue/button';
       font-size: 16px;
   }
 
+  @media only screen and (max-width: 730px) {
+    .text-container {
+      width: 150px;
+      height: 100px;
+    }
+    h3 {
+      font-size: 15px;
+      margin: 0px;
+    }
+    #learn-more-btn {
+    width: 120px;
+    margin-top: 9px;
+    }
+  }
+
   img {
     width: 100%; max-height: 90vh;    
     box-shadow: 1px 1px black;

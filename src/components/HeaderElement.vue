@@ -5,7 +5,6 @@
 <template>
   <header>
     <h1>
-      <i class="pi pi-bolt" style="font-size: 1.5rem; margin-right: 5px"></i>
       Car Accessories
     </h1>
     <ul>
@@ -32,13 +31,16 @@
     align-items: center;
     justify-content: space-around;
     background: white;
-    border-bottom: 1px solid black;
     width: 100%;
     height: 70px;
   }
+  h1 {
+    padding-top: 8px;
+    font-size: 30px;
+  }
   ul {
     display: flex;
-    width: 17em;
+    width: 18em;
     height: 30px;
     align-items: end;
     justify-content: space-around;
@@ -46,15 +48,39 @@
   }
   li {
     list-style: none;
-    font-size: 18px;
+    font-size: 19px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-  li:hover {
-    text-decoration: underline;
+  @media only screen and (max-width: 730px) {
+    h1 {
+    font-size: 22px;
+    }
+    ul {
+    width: 16em;
+    }
+    li {
+      font-size: 16px;
+    }
+    }
+    @media only screen and (max-width: 420px) {
+    h1 {
+    font-size: 18px;
+    padding-top: 14px;
+    }
+    ul {
+    width: 14em;
+    }
+    li {
+      font-size: 13px;
+    }
   }
 
   .link {
     color: black;
     text-decoration: none;
+  }
+
+  .link:hover {
+    color: blue;
   }
 </style>
