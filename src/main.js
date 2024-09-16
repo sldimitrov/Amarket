@@ -5,6 +5,7 @@ import WelcomePhoto from "./components/WelcomePhoto.vue";
 import HeaderElement from "./components/HeaderElement.vue";
 import CardItem from "./components/CardItem.vue";
 import Aura from "@primevue/themes/aura";
+import router from "./router";
 import "./main.css";
 
 const app = createApp(App);
@@ -16,4 +17,5 @@ app.use(PrimeVue, {
     preset: Aura,
   },
 });
+app.use(router);
 app.mount("#app");

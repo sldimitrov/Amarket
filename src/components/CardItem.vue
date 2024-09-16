@@ -3,7 +3,7 @@ import Card from 'primevue/card';
 import Button from 'primevue/button'
 import phoneHolder from '../assets/accessories/phone-holder.webp'
 import steeringWheel from '../assets/accessories/steering-wheel.webp'
-import carTent from '../assets/accessories/car-tent.webp'
+import duck from '../assets/accessories/duck.webp'
 </script>
 
 <template>
@@ -15,7 +15,7 @@ import carTent from '../assets/accessories/car-tent.webp'
         <img alt="user header" :src="steeringWheel" />
     </template>
     <template #title>Interior</template>
-    <template #subtitle>Card subtitle</template>
+    <template #subtitle>Car Accessories</template>
     <template #footer>
       <div class="flex gap-4 mt-1">
         <!-- <Button label="Cancel" severity="secondary" outlined class="w-full" /> -->
@@ -28,7 +28,7 @@ import carTent from '../assets/accessories/car-tent.webp'
         <img alt="user header" :src="phoneHolder" />
     </template>
     <template #title>Exterior</template>
-    <template #subtitle>Card subtitle</template>
+    <template #subtitle>Car Accessories</template>
     <template #footer>
       <div class="flex gap-4 mt-1">
         <!-- <Button label="Cancel" severity="secondary" outlined class="w-full" /> -->
@@ -38,10 +38,10 @@ import carTent from '../assets/accessories/car-tent.webp'
   </Card>
   <Card class="card" style="width: 25rem; overflow: hidden">
     <template #header>
-        <img alt="user header" :src="carTent" />
+        <img alt="user header" :src="duck" />
     </template>
     <template #title>Additional Stuff</template>
-    <template #subtitle>Card subtitle</template>
+    <template #subtitle>Car Accessories</template>
     <template #footer>
       <div class="flex gap-4 mt-1">
         <!-- <Button label="Cancel" severity="secondary" outlined class="w-full" /> -->

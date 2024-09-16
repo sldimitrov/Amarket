@@ -3,10 +3,9 @@
 </script>
 
 <template>
-  <div class="container">
+  <div>
     <header-element />
-    <welcome-photo />
-    <card-item />
+    <router-view />
   </div>
 </template>
 

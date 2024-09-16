@@ -5,20 +5,21 @@
 <template>
   <header>
     <h1>
+      <i class="pi pi-bolt" style="font-size: 1.5rem; margin-right: 5px"></i>
       Car Accessories
     </h1>
     <ul>
       <li>
-        Home
+        <router-link class="link" :to="{ name: 'Home'}">Home</router-link>
       </li>
       <li>
-        Interior
+        <router-link class="link"  :to="{ name: 'Interior'}">Interior</router-link>
       </li>
       <li>
-        Exterior
+        <router-link class="link"  :to="{ name: 'Exterior'}">Exterior</router-link> 
       </li>
       <li>
-        Contacts
+        <router-link class="link"  :to="{ name: 'Contacts'}">Contacts</router-link>
       </li>
     </ul>
   </header>
@@ -30,7 +31,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    box-shadow: 0 0 6px #64646433;
+    background: white;
+    border-bottom: 1px solid black;
     width: 100%;
     height: 70px;
   }
@@ -48,7 +50,11 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   li:hover {
-    color: gold;
     text-decoration: underline;
+  }
+
+  .link {
+    color: black;
+    text-decoration: none;
   }
 </style>
