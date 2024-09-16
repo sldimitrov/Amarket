@@ -4,9 +4,8 @@
 
 <template>
   <div class="container">
-    <!-- <header-element /> -->
     <welcome-photo />
-    <card-item />
+    <categories-section />
   </div>
 </template>
 

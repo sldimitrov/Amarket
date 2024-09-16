@@ -3,7 +3,8 @@ import Card from 'primevue/card';
 import Button from 'primevue/button'
 import phoneHolder from '../assets/accessories/phone-holder.webp'
 import steeringWheel from '../assets/accessories/steering-wheel.webp'
-import duck from '../assets/accessories/duck.webp'
+// import duck from '../assets/accessories/duck.webp'
+import CardItem from './UI/CardItem.vue';
 </script>
 
 <template>
@@ -34,7 +35,7 @@ import duck from '../assets/accessories/duck.webp'
       </div>
     </template>
   </Card>
-  <Card class="card" style="width: 25rem; overflow: hidden">
+  <!-- <Card class="card" style="width: 25rem; overflow: hidden">
     <template #header>
         <img alt="user header" :src="duck" />
     </template>
@@ -45,7 +46,8 @@ import duck from '../assets/accessories/duck.webp'
         <Button label="Review" class="w-full" />
       </div>
     </template>
-  </Card>
+  </Card> -->
+  <CardItem title="test" subtitle="text"/>
   </div>
 </div>
 </template>
