@@ -1,5 +1,6 @@
 <script setup>
 import LastlyAdded from '@/components/LastlyAdded.vue';
+import ContactsUs from '@/components/ContactsUs.vue';
 </script>
 
 <template>
@@ -7,6 +8,7 @@ import LastlyAdded from '@/components/LastlyAdded.vue';
     <welcome-photo />
     <categories-section />
     <lastly-added />
+    <contacts-us />
   </div>
 </template>
 
