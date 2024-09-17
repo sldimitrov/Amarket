@@ -14,7 +14,7 @@
               <router-link class="link" :to="{ name: 'Home'}">Home</router-link>
             </li>
             <li>
-              <router-link class="link"  :to="{ name: 'Interior'}">Interior</router-link>
+              <router-link class="link" :to="{ name: 'Interior'}">Interior</router-link>
             </li>
             <li>
               <router-link class="link"  :to="{ name: 'Exterior'}">Exterior</router-link> 
@@ -56,6 +56,9 @@
     list-style: none;
     font-size: 19px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  li:hover {
+    background: rgba(242, 240, 240, 0.881);
   }
 
   .dropdown button {

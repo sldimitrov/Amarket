@@ -15,23 +15,38 @@ const props = defineProps(['img', 'title', 'subtitle', 'price', 'btn',])
     <template #subtitle><p class="card-text">{{props.subtitle}}</p></template>
     <template #content><p class="card-text">{{ props.price }}</p></template>
     <template #footer>
-      <a href="tel:+359876533802">
-      <div id="btn-ctn" class="flex gap-4 mt-1">
-           <Button id="reviewBtn" class="w-full">
+      <div id="card-footer">
+        <a href="tel:+359876533802">
+          <Button id="reviewBtn" class="w-full">
             <p id="btn">{{ btn }}</p>
             <div id="purchase-options">
               <p id="number">0876533802</p>
               <i class="pi pi-phone" style="font-size: 1rem"></i>
             </div>
           </Button>
+        </a>
       </div>
-    </a>
-
     </template>
   </Card> 
 </template>
 
-<style scoped>
+<style scoped> 
+  #number {
+    display: none;
+    font-size: 20px;
+  }
+  #reviewBtn:hover > a {
+    display: block;
+  }
+  #purchase-options {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  #reviewBtn:hover > #btn {
+    display: none;
+  }
+
   @media only screen and (max-width: 1270px) and (min-width: 881px) {
     .card {
       max-width: 280px;
@@ -44,27 +59,12 @@ const props = defineProps(['img', 'title', 'subtitle', 'price', 'btn',])
     }
   }
 
-  #reviewBtn:hover > a {
-    display: block;
-  }
-
-  a { 
-    display: none;
-    text-decoration: none;
-  }
-
   #number {
     font-size: 18px;
   }
 
   #purchase-options {
     display: flex;
-    width: 100%;
-    height: 100%;
-  }
-
-  #reviewBtn:hover > #btn {
-    display: none;
   }
 
   .card {

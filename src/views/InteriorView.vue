@@ -90,7 +90,7 @@ const handleSearch = (search) => {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 700px;
+    height: 800px;
     color: black;
   }
 
@@ -101,6 +101,8 @@ const handleSearch = (search) => {
     width: 60%;
     height: auto;
     margin-bottom: 20px;
+    min-height: 800px;
+
   }
 
   h3 {
