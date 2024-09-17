@@ -21,7 +21,6 @@
     </p>
     </div>
   </div>
-
 </template>
 
 
@@ -36,6 +35,7 @@
     flex-direction: column;
     width: 70%;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
   #cnt-info {
     display: flex;

@@ -5,7 +5,6 @@
   <header>
     <h1>
       <router-link id="title" :to="{ name: 'Home'}">Car Accessories</router-link>
-     
     </h1>
       <div class="dropdown">
         <button>Pages</button>
@@ -30,6 +29,34 @@
 </template>
 
 <style scoped>
+  header {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: white;
+    width: 100%;
+    height: 70px;
+  }
+  h1 {
+    padding-top: 8px;
+    font-size: 30px;
+  }
+  ul {
+    display: flex;
+    width: 18em;
+    height: 30px;
+    align-items: end;
+    justify-content: space-around;
+    padding-left: 0px;
+    margin: 0px;
+  }
+  li {
+    list-style: none;
+    font-size: 19px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
   .dropdown button {
     display: none;
   }
@@ -76,35 +103,6 @@
       }
     }
   
-
-
-  header {
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background: white;
-    width: 100%;
-    height: 70px;
-  }
-  h1 {
-    padding-top: 8px;
-    font-size: 30px;
-  }
-  ul {
-    display: flex;
-    width: 18em;
-    height: 30px;
-    align-items: end;
-    justify-content: space-around;
-    padding-left: 0px;
-    margin: 0px;
-  }
-  li {
-    list-style: none;
-    font-size: 19px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
   @media only screen and (max-width: 730px) {
     h1 {
       font-size: 22px;
