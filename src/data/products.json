@@ -15,7 +15,7 @@
     "title": "Audi Oil Change Service"
   },
   {
-    "service_id": 2,
+    "service_id": "2",
     "dealer": "Audi Downtown",
     "discount_percentages": 5,
     "discount_price": 950,
@@ -30,7 +30,7 @@
     "title": "Audi Brake Service"
   },
   {
-    "service_id": 3,
+    "service_id": "3",
     "dealer": "Audi Service Hub",
     "discount_percentages": 15,
     "discount_price": 850,
@@ -45,7 +45,7 @@
     "title": "Audi Full Maintenance Service"
   },
   {
-    "service_id": 4,
+    "service_id": "4",
     "dealer": "Audi City Center",
     "discount_percentages": 8,
     "discount_price": 920,
@@ -60,7 +60,7 @@
     "title": "Audi Engine Check & Repair"
   },
   {
-    "service_id": 5,
+    "service_id": "5",
     "dealer": "Audi North",
     "discount_percentages": 0,
     "discount_price": 700,
@@ -75,7 +75,7 @@
     "title": "Audi Tire Replacement Service"
   },
   {
-    "service_id": 6,
+    "service_id": "6",
     "dealer": "Audi Downtown",
     "discount_percentages": 12,
     "discount_price": 1760,
@@ -90,7 +90,7 @@
     "title": "Audi Transmission Repair"
   },
   {
-    "service_id": 7,
+    "service_id": "7",
     "dealer": "Audi City Center",
     "discount_percentages": 10,
     "discount_price": 450,
@@ -105,7 +105,7 @@
     "title": "Audi Oil Change Service"
   },
   {
-    "service_id": 8,
+    "service_id": "8",
     "dealer": "Audi Downtown",
     "discount_percentages": 5,
     "discount_price": 950,
@@ -120,7 +120,7 @@
     "title": "Audi Brake Service"
   },
   {
-    "service_id": 9,
+    "service_id": "9",
     "dealer": "Audi Service Hub",
     "discount_percentages": 15,
     "discount_price": 850,
