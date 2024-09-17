@@ -2,24 +2,49 @@
 import ProductItem from '@/components/UI/ProductItem.vue';
 import InputText from 'primevue/inputtext';
 import jobData from '@/data/products.json'
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 
-const jobs = ref(jobData);
-console.log(jobs.value)
+const jobs = jobData;
+
+
+const searchFilter = ref('')
+
+const filteredJobs = computed(() => {
+  if (searchFilter.value != '') {
+    return jobs.filter(
+     item => item.title.includes(searchFilter.value) ||
+     item.service_type.includes(searchFilter.value)
+    );
+  }
+
+  return jobs
+})
+
+const handleSearch = (search) => {
+  searchFilter.value = search.target.value
+
+}
 </script>
 
 <template>
   <div id="interior">
     <section id="filter">
       <div id="search">
-        <h3>Search Bar</h3>
-        <InputText id="search-input" type="text" v-model="value" />
+        <h3>Search</h3>
+        <InputText id="search-input" @input="handleSearch" type="text" v-model="value" />
       </div>
     </section>
     <section id="products">
-      <div id="card" v-for="job in jobs" :key="job.article_number">
-        <ProductItem :img="job.images[0]" :title="job.title" :subtitle="job.service_type" :price="job.price + '$'" btn="Purchase"  />
-      </div>
+      <template v-if="filteredJobs.length">
+        <div id="card" v-for="job in filteredJobs" :key="job.article_number">
+          <ProductItem :img="job.images[0]" :title="job.title" :subtitle="job.service_type" :price="job.price + '$'" btn="Purchase"  />
+        </div>
+      </template>
+      <template v-else>
+        <div id="backup">
+          <h2 id="empty-search">No items mathing your search.</h2>
+        </div>
+      </template>
     </section>
 
   </div>
@@ -53,8 +78,20 @@ console.log(jobs.value)
     height: 90px;
   }
 
+  #empty-search {
+    text-align: center;
+  }
+
   #search-input {
     width: 90%;
+  }
+
+  #backup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    color: black;
   }
 
   #products {

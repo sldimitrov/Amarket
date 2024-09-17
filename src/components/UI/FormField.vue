@@ -28,12 +28,8 @@
           <label for="username">Town</label>
         </FloatLabel>
         <FloatLabel>
-          <InputText id="username" />
-          <label for="username">Gender</label>
-        </FloatLabel>
-        <FloatLabel>
-          <InputText id="email" />
-          <label for="email">Message</label>
+          <Textarea id="txtarea" v-model="value" rows="5" cols="30" />
+          <label>Username</label>
         </FloatLabel>
       </div>
     </form>
@@ -54,6 +50,12 @@
     width: 100%;
     min-height: 450px;
     background: #f8f8f8;
+  }
+  
+  #txtarea {
+    background: black;
+    border-radius: 5px;
+    width: 220px;
   }
   
   form{
