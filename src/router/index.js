@@ -23,7 +23,7 @@ const routes = [
   {
     path: "/contacts",
     name: "Contacts",
-    component: () => ContactsView,
+    component: ContactsView,
   },
 ];
 
