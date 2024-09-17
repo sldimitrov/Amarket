@@ -1,6 +1,6 @@
 [
   {
-    "service_id": 1,
+    "service_id": "1",
     "dealer": "Audi City Center",
     "discount_percentages": 10,
     "discount_price": 450,
