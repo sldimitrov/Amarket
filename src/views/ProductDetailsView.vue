@@ -1,5 +1,6 @@
 <script setup>
 import { useRoute } from 'vue-router';
+import PurchaseBtn from '@/components/UI/PurchaseBtn.vue';
 import productsData from '@/data/products.json'
 const products = productsData;
 
@@ -25,6 +26,9 @@ const currentProduct = products.filter(product => product.service_id === id)
       <h3 v-else id="onsale">
         {{ currentProduct[0].price }}лв.
       </h3>
+      <div id="purchase">
+        <PurchaseBtn />
+      </div>
     </div>
 
   </div>
@@ -55,8 +59,8 @@ const currentProduct = products.filter(product => product.service_id === id)
   #pricing {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 100px;
+    align-items: baseline;
+    width: 120px;
   }
 
   #onsale {
@@ -76,6 +80,11 @@ const currentProduct = products.filter(product => product.service_id === id)
     color: #999;
   }
 
+  #purchase {
+    width: 220px;
+    margin-bottom: 10px;
+  }
+
   img {
     max-width: 550px;
   }
@@ -83,5 +92,6 @@ const currentProduct = products.filter(product => product.service_id === id)
   h2, h3 {
     color: black;
     text-align: center;
+    margin-bottom: 6px;
   }
 </style>

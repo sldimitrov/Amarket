@@ -37,7 +37,7 @@ const handleSearch = (search) => {
     <section id="products">
       <template v-if="filteredJobs.length">
         <div id="card" v-for="job in filteredJobs" :key="job.article_number">
-          <ProductItem :item="job" btn="Purchase"  />
+          <ProductItem :item="job" />
         </div>
       </template>
       <template v-else>

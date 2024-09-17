@@ -1,9 +1,9 @@
 <script setup>
 import Card from 'primevue/card';
-import Button from 'primevue/button'
 import { defineProps } from 'vue';
+import PurchaseBtn from './PurchaseBtn.vue';
 
-const props = defineProps(['item', 'btn'])
+const props = defineProps(['item'])
 </script>
 
 <template>
@@ -17,17 +17,27 @@ const props = defineProps(['item', 'btn'])
     <template #subtitle><p class="card-text">{{item.dealer}}</p></template>
     <template #content><p class="card-text">{{item.price }}</p></template>
     <template #footer>
-        <a href="tel:+359876533802">
-          <Button id="reviewBtn" class="w-full">
-            <i class="pi pi-phone" style="font-size: 1rem"></i>
-            <p id="btn">{{ btn }}</p>
-          </Button>
-        </a>
+      <PurchaseBtn />
     </template>
   </Card> 
 </template>
 
 <style scoped> 
+  .card {
+    margin: 6px;
+  }
+
+  
+
+  p {
+    margin: 0;
+  }
+
+  .card-text {
+    margin: 0px;
+    text-align: center;
+  }
+
   @media only screen and (max-width: 1270px) and (min-width: 881px) {
     .card {
       max-width: 280px;
@@ -40,42 +50,6 @@ const props = defineProps(['item', 'btn'])
     }
   }
 
-  #number {
-    font-size: 18px;
-  }
-
-  #purchase-options {
-    display: flex;
-  }
-
-  .card {
-    margin: 5px;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  .card-text {
-    margin: 0px;
-    text-align: center;
-  }
-
-  #reviewBtn {
-    width: 55%;
-  }
-
-  #btn-ctn {
-    display: flex;
-    justify-content: center;
-  }
-
-  #review-btn-txt {
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
-  }
-  
   img {
     width: 100%;
   }
