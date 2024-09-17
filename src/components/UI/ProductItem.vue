@@ -17,38 +17,17 @@ const props = defineProps(['item', 'btn'])
     <template #subtitle><p class="card-text">{{item.dealer}}</p></template>
     <template #content><p class="card-text">{{item.price }}</p></template>
     <template #footer>
-      <div id="card-footer">
         <a href="tel:+359876533802">
           <Button id="reviewBtn" class="w-full">
+            <i class="pi pi-phone" style="font-size: 1rem"></i>
             <p id="btn">{{ btn }}</p>
-            <div id="purchase-options">
-              <p id="number">0876533802</p>
-              <i class="pi pi-phone" style="font-size: 1rem"></i>
-            </div>
           </Button>
         </a>
-      </div>
     </template>
   </Card> 
 </template>
 
 <style scoped> 
-  #number {
-    display: none;
-    font-size: 20px;
-  }
-  #reviewBtn:hover > a {
-    display: block;
-  }
-  #purchase-options {
-    display: flex;
-    width: 100%;
-    height: 100%;
-  }
-  #reviewBtn:hover > #btn {
-    display: none;
-  }
-
   @media only screen and (max-width: 1270px) and (min-width: 881px) {
     .card {
       max-width: 280px;
