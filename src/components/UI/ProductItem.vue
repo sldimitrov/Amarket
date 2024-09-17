@@ -3,6 +3,17 @@ import Card from 'primevue/card';
 import Button from 'primevue/button'
 import { defineProps } from 'vue';
 
+function openViberChat(product) {
+  const phoneNumber = '+359876533802'; // Replace with your Viber number
+  const message = `I'm interested in purchasing ${product.name}`;
+
+  // Construct the deep link URL
+  const viberUrl = `viber://add?number=${phoneNumber}&message=${encodeURIComponent(message)}`;
+
+  // Open the URL in a new tab
+  window.open(viberUrl, '_blank');
+}
+
 const props = defineProps(['img', 'title', 'subtitle', 'price', 'btn',])
 </script>
 
@@ -16,7 +27,7 @@ const props = defineProps(['img', 'title', 'subtitle', 'price', 'btn',])
     <template #content><p class="card-text">{{ props.price }}</p></template>
     <template #footer>
       <div id="btn-ctn" class="flex gap-4 mt-1">
-        <Button id="reviewBtn" class="w-full">
+        <Button id="reviewBtn" @click="openViberChat" class="w-full">
           {{ btn }}
         </Button>
       </div>
