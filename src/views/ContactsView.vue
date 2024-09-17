@@ -16,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content:space-around;
+    box-shadow: 0 0 6 grey;
     margin-top: 40px;
     min-height: 800px;
   }

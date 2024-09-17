@@ -1,62 +1,27 @@
 <script setup>
-// const products = [
-//   {
-//     article_number: "409013",
-//     brand: "Volkl",
-//     discount_percentages: 0,
-//     discount_price: 100,
-//     images: [
-//       'https://cf-cdn-v6-api.audi.at/files/34bc8116c9888b1c5c25735b4d68e4705cfa7947/162d566b-359c-4df4-8d00-041e0cd7d3f1/a320235644lichtsignatur-s-l',
-//       'https://www.coc-online.com/cdn/shop/files/ECCertificateofConformityAUDI.png?v=1701435816',
-//       'https://cf-cdn-v6-api.audi.at/files/a051c46236fef918380c748834e0b5ef5ab8b5df/281565fe-6f9b-469c-924e-50eeec29a1c8/810x1080-rs720201544',
-//     ],
-//     price: 100,
-//     product_type: "ski",
-//     size: 156,
-//     title: "Volkl Energy"
-//   },
-//   {
-//     article_number: "409013",
-//     brand: "Volkl",
-//     discount_percentages: 0,
-//     discount_price: 100,
-//     images: [
-//       'https://cf-cdn-v6-api.audi.at/files/34bc8116c9888b1c5c25735b4d68e4705cfa7947/162d566b-359c-4df4-8d00-041e0cd7d3f1/a320235644lichtsignatur-s-l',
-//       'https://www.coc-online.com/cdn/shop/files/ECCertificateofConformityAUDI.png?v=1701435816',
-//       'https://cf-cdn-v6-api.audi.at/files/a051c46236fef918380c748834e0b5ef5ab8b5df/281565fe-6f9b-469c-924e-50eeec29a1c8/810x1080-rs720201544',
-//     ],
-//     price: 100,
-//     product_type: "ski",
-//     size: 156,
-//     title: "Volkl Energy"
-//   },
-//   {
-//     article_number: "409013",
-//     brand: "Volkl",
-//     discount_percentages: 0,
-//     discount_price: 100,
-//     images: [
-//       'https://cf-cdn-v6-api.audi.at/files/34bc8116c9888b1c5c25735b4d68e4705cfa7947/162d566b-359c-4df4-8d00-041e0cd7d3f1/a320235644lichtsignatur-s-l',
-//       'https://www.coc-online.com/cdn/shop/files/ECCertificateofConformityAUDI.png?v=1701435816',
-//       'https://cf-cdn-v6-api.audi.at/files/a051c46236fef918380c748834e0b5ef5ab8b5df/281565fe-6f9b-469c-924e-50eeec29a1c8/810x1080-rs720201544',
-//     ],
-//     price: 100,
-//     product_type: "ski",
-//     size: 156,
-//     title: "Volkl Energy"
-//   }
-// ]
-// import CardItem from '@/components/UI/CardItem.vue';
+import ProductItem from '@/components/UI/ProductItem.vue';
+import InputText from 'primevue/inputtext';
+import jobData from '@/data/products.json'
+import { ref } from 'vue';
+
+const jobs = ref(jobData);
+console.log(jobs.value)
 </script>
 
 <template>
   <div id="interior">
     <section id="filter">
-      <h3>Search...</h3>
+      <div id="search">
+        <h3>Search Bar</h3>
+        <InputText id="search-input" type="text" v-model="value" />
+      </div>
     </section>
-    <section  id="products">
-      <!-- <CardItem :img="product.images[0]" :title="product.title" :subtitle="product.product_type" path=""  /> -->
+    <section id="products">
+      <div id="card" v-for="job in jobs" :key="job.article_number">
+        <ProductItem :img="job.images[0]" :title="job.title" :subtitle="job.service_type" :price="job.price + '$'" btn="Purchase"  />
+      </div>
     </section>
+
   </div>
 </template>
 
@@ -64,34 +29,83 @@
   #interior {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
     width: 100%;
-    height: 100%;
+    height: 100%
   }
 
   #filter {
     display: flex;
     justify-content: center;
-    width: 15%;
+    width: 12%;
     height: auto;
     background: #f8f8f8;
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+
+
+  #search {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+  }
+
+  #search-input {
+    width: 90%;
+  }
+
+  #products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 60%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    color: black;
+    margin: 0;
   }
   
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 641px) {
     #interior {
       flex-direction: column;
       align-items: center;
     }
     #filter {
-    width: 50%;
+    width: 40%;
     }
   }
 
-  #products {
-    width: 50%;
-    height: auto;
-    background: gold;
+  .card {
+    max-width: 300px;
   }
-  h3 {
-    color: black;
+
+  @media only screen and (max-width: 1040px) {
+    .card {
+    max-width: 240px;
+    }
+  }
+
+  @media only screen and (max-width: 840px) and (min-width: 640px) {
+    .card {
+    max-width: 180px;
+    }
+  }
+
+  @media only screen and (max-width: 430px) {
+    .card {
+    max-width: 200px;
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    .card {
+    max-width: 160px;
+    }
   }
 </style>

@@ -9,11 +9,11 @@
     <div id="cnt-info">
     <p>
       <i class="pi pi-envelope" style="font-size: 2rem"></i>
-      slavidimitrov54@gmail.com
+      car_accessories@gmail.com
     </p>
     <p>
       <i class="pi pi-phone" style="font-size: 2rem"></i>
-      0876533802
+      +359 3213 7123
     </p>
     <p>
       <i class="pi pi-facebook" style="font-size: 2rem"></i>
@@ -34,13 +34,12 @@
     display: flex;
     flex-direction: column;
     width: 70%;
-    margin-top: 20px;
     margin-bottom: 20px;
   }
   #cnt-info {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 35px;
     width: 100%;
   }
 

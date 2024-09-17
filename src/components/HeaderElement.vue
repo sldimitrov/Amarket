@@ -3,7 +3,7 @@
 
 <template>
   <header>
-    <h1>
+      <h1>
       <router-link id="title" :to="{ name: 'Home'}">Car Accessories</router-link>
     </h1>
       <div class="dropdown">
@@ -24,7 +24,7 @@
             </li>
         </ul>    
         </div>
-      </div>
+      </div>    
   </header>
 </template>
 
@@ -34,6 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    box-shadow: 0 0 6px #64646433;
     background: white;
     width: 100%;
     height: 70px;

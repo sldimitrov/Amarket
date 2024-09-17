@@ -3,7 +3,7 @@ import Card from 'primevue/card';
 import Button from 'primevue/button'
 import { defineProps } from 'vue';
 
-const props = defineProps(['img', 'title', 'subtitle', 'price', 'btn', 'path'])
+const props = defineProps(['img', 'title', 'subtitle', 'price', 'btn',])
 </script>
 
 <template>
@@ -17,9 +17,7 @@ const props = defineProps(['img', 'title', 'subtitle', 'price', 'btn', 'path'])
     <template #footer>
       <div id="btn-ctn" class="flex gap-4 mt-1">
         <Button id="reviewBtn" class="w-full">
-          <router-link id="review-btn-txt" :to="{ name: props.path}">
-            {{props.btn}}
-          </router-link>
+          {{ btn }}
         </Button>
       </div>
     </template>

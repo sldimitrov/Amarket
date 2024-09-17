@@ -9,9 +9,9 @@ import duck from '../assets/accessories/duck.webp'
   <div id="categories">
   <h2>Categories</h2>
   <div id="card-collection">
-    <CardItem :img="steeringWheel" title="Interior" subtitle="Car Accessories" path="Interior"/>
-    <CardItem :img="phoneHolder" title="Exterior" subtitle="Car Accessories" path="Exterior"/>
-    <CardItem :img="duck" title="Additional Stuff" subtitle="Car Accessories" path="Interior"/>
+    <CardItem :img="steeringWheel" title="Interior" subtitle="Car Accessories" btn="Review" path="Interior"/>
+    <CardItem :img="phoneHolder" title="Exterior" subtitle="Car Accessories" btn="Review"  path="Exterior"/>
+    <CardItem :img="duck" title="Additional Stuff" subtitle="Car Accessories" btn="Review"  path="Interior"/>
   </div>
 </div>
 </template>
