@@ -3,17 +3,19 @@ import Card from 'primevue/card';
 import Button from 'primevue/button'
 import { defineProps } from 'vue';
 
-const props = defineProps(['img', 'title', 'subtitle', 'price', 'btn',])
+const props = defineProps(['item', 'btn'])
 </script>
 
 <template>
  <Card class="card" style="width: 25rem; overflow: hidden">
     <template #header>
-        <img alt="user header" :src="img" />
+      <router-link :to="{ name: 'Products', params: { id: item.service_id}}">
+        <img  alt="user header" :src="props.item.images[0]" />
+      </router-link>
     </template>
-    <template #title><p class="card-text">{{props.title}}</p></template>
-    <template #subtitle><p class="card-text">{{props.subtitle}}</p></template>
-    <template #content><p class="card-text">{{ props.price }}</p></template>
+    <template #title><p class="card-text">{{item.title}}</p></template>
+    <template #subtitle><p class="card-text">{{item.dealer}}</p></template>
+    <template #content><p class="card-text">{{item.price }}</p></template>
     <template #footer>
       <div id="card-footer">
         <a href="tel:+359876533802">
