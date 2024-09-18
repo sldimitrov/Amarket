@@ -12,8 +12,8 @@ const searchFilter = ref('')
 const filteredJobs = computed(() => {
   if (searchFilter.value != '') {
     return jobs.filter(
-     item => item.title.includes(searchFilter.value) ||
-     item.service_type.includes(searchFilter.value)
+     item => item.title.toLowerCase().includes(searchFilter.value.toLowerCase()) ||
+     item.dealer.toLowerCase().includes(searchFilter.value.toLowerCase())
     );
   }
 

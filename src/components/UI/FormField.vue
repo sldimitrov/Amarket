@@ -1,39 +1,56 @@
 <script setup>
-  import FloatLabel from 'primevue/floatlabel';
-  import InputText from 'primevue/inputtext';
-  import Button from 'primevue/button';
+import Textarea from 'primevue/textarea';
+import InputText from 'primevue/inputtext';
+import Button from 'primevue/button';
+import { ref } from 'vue';
+
+const name = ref('')
+const email = ref('')
+const age = ref('')
+const message = ref('')
+
+function setValue(event, value) {
+  if (value === 'name') {
+    name.value = event.target.value
+  } else if (value === 'email') {
+    email.value = event.target.value
+  } else if (value === 'age') {
+    age.value = event.target.value
+  } else {
+    message.value = event.target.value
+  }
+}
+
+function sendEmail() {
+  console.log({
+    name: name.value,
+    email: email.value,
+    age: age.value,
+    message: message.value,
+  })
+}
 </script>
 
 <template>
   <div id="form-section">
     <h2>Send an Email</h2>
     <form action="submit">
-      <div id="left">
-        <FloatLabel>
-          <InputText id="username" />
-          <label for="username">Name</label>
-        </FloatLabel>
-        <FloatLabel>
-          <InputText id="email" />
-          <label for="email">Email</label>
-        </FloatLabel>
-        <FloatLabel>
-          <InputText id="age" />
-          <label for="age">Age</label>
-        </FloatLabel>
+      <div id="form-inputs">
+        <div id="left">
+        <label for="name">Name</label>
+        <InputText @input="setValue($event, 'name')" type="text" />
+        <label for="name">Email</label>
+        <InputText @input="setValue($event, 'email')" type="text" />
+        <label for="name">Age</label>
+        <InputText @input="setValue($event, 'age')" type="text" />
       </div>
       <div id="right">
-        <FloatLabel>
-          <InputText id="username" />
-          <label for="username">Town</label>
-        </FloatLabel>
-        <FloatLabel>
-          <Textarea id="txtarea" v-model="value" rows="5" cols="30" />
-          <label>Username</label>
-        </FloatLabel>
+        <label for="name">Message</label>
+        <Textarea @input="setValue" autoResize rows="10" cols="25" />
       </div>
+      </div>
+      <Button class="btn"  @click="sendEmail" label="Send" />
     </form>
-    <Button class="btn" label="Send" />
   </div>
 </template>
 
@@ -41,6 +58,19 @@
   h2{
     color: black;
   }
+  label {
+    color: black;
+    padding-left: 5px;
+  }
+
+  form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   #form-section {
     display: flex;
     flex-direction: column;
@@ -58,18 +88,22 @@
     width: 220px;
   }
   
-  form{
-    width: 80%;
+  #form-inputs {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
   }
   @media screen and (max-width: 600px) {
-    form {
+    #form-inputs {
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       height: 400px;
+    }
+
+    .btn {
+      margin-bottom: 15px;
     }
   }
   #left, #right {
