@@ -1,8 +1,8 @@
 <script setup>
 import CardItem from './UI/CardItem.vue';
-import phoneHolder from '../assets/accessories/phone-holder.webp'
 import steeringWheel from '../assets/accessories/steering-wheel.webp'
-import duck from '../assets/accessories/duck.webp'
+import audiExterior from '../assets/accessories/audi_exterior.webp'
+import audiAddition from '../assets/accessories/addition.webp'
 </script>
 
 <template>
@@ -10,8 +10,8 @@ import duck from '../assets/accessories/duck.webp'
   <h2>Categories</h2>
   <div id="card-collection">
     <CardItem :img="steeringWheel" title="Interior" subtitle="Car Accessories" btn="Review" path="Interior"/>
-    <CardItem :img="phoneHolder" title="Exterior" subtitle="Car Accessories" btn="Review"  path="Exterior"/>
-    <CardItem :img="duck" title="Additional Stuff" subtitle="Car Accessories" btn="Review"  path="Interior"/>
+    <CardItem :img="audiExterior" title="Exterior" subtitle="Car Accessories" btn="Review"  path="Exterior"/>
+    <CardItem :img="audiAddition" title="Additional Stuff" subtitle="Car Accessories" btn="Review"  path="Interior"/>
   </div>
 </div>
 </template>

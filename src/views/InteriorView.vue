@@ -31,7 +31,7 @@ const handleSearch = (search) => {
     <section id="filter">
       <div id="search">
         <h3>Search</h3>
-        <InputText id="search-input" @input="handleSearch" type="text" v-model="value" />
+        <InputText id="search-input" @input="handleSearch" type="text" />
       </div>
     </section>
     <section id="products">
@@ -117,6 +117,7 @@ const handleSearch = (search) => {
     }
     #filter {
     width: 40%;
+    margin: 0;
     }
   }
 
