@@ -1,6 +1,5 @@
 <script setup>
 import Textarea from 'primevue/textarea';
-import InputText from 'primevue/inputtext';
 import Button from 'primevue/button';
 import { ref } from 'vue';
 
@@ -21,36 +20,42 @@ function setValue(event, value) {
   }
 }
 
-function sendEmail() {
-  console.log({
+function sendEmail(e) {
+  if (name.value && name.value.trim() || email.value && email.value.trim() ) {
+    console.log({
     name: name.value,
     email: email.value,
     age: age.value,
     message: message.value,
   })
+  e.preventDefault()
+  }
 }
 </script>
 
 <template>
   <div id="form-section">
     <h2>Send an Email</h2>
-    <form @submit.prevent="sendEmail" action="submit">
+    <VeeForm>
       <div id="form-inputs">
         <div id="left">
         <label for="name">Name</label>
-        <InputText required @input="setValue($event, 'name')" type="text" />
-        <label for="name">Email</label>
-        <InputText required @input="setValue($event, 'email')" type="text" />
-        <label for="name">Age</label>
-        <InputText required @input="setValue($event, 'age')" type="text" />
+        <VeeField name="name" @input="setValue($event, 'name')" type="text" rules="required" />
+        <VeeErrorMessage name="name" class="form-error" />
+        <label for="email">Email</label>
+        <VeeField name="email"  @input="setValue($event, 'email')" type="text" rules="required" />
+        <VeeErrorMessage name="email" class="form-error" />
+        <label for="age">Age</label>
+        <VeeField name="age" @input="setValue($event, 'age')" type="text" rules="required" />
+        <VeeErrorMessage name="age" class="form-error" />
       </div>
       <div id="right">
         <label for="name">Message</label>
-        <Textarea required @input="setValue" autoResize rows="10" cols="25" />
+        <Textarea @input="setValue" autoResize rows="10" cols="20" />
       </div>
       </div>
       <Button class="btn" type="submit" @click="sendEmail" label="Send" />
-    </form>
+    </VeeForm>
   </div>
 </template>
 
@@ -117,5 +122,15 @@ function sendEmail() {
     margin-top: 30px;
     font-size: 16px;
     width: 110px;
+  }
+
+  .form-error {
+    display: flex;
+    justify-content: center;
+    background: hsla(348, 100%, 84%, 0.717);
+    border-radius: 25px;
+    padding: 2px;
+    color: rgb(201, 1, 1);
+    margin-top: 1px;
   }
 </style>
