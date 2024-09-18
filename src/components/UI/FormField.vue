@@ -34,22 +34,22 @@ function sendEmail() {
 <template>
   <div id="form-section">
     <h2>Send an Email</h2>
-    <form action="submit">
+    <form @submit.prevent="sendEmail" action="submit">
       <div id="form-inputs">
         <div id="left">
         <label for="name">Name</label>
-        <InputText @input="setValue($event, 'name')" type="text" />
+        <InputText required @input="setValue($event, 'name')" type="text" />
         <label for="name">Email</label>
-        <InputText @input="setValue($event, 'email')" type="text" />
+        <InputText required @input="setValue($event, 'email')" type="text" />
         <label for="name">Age</label>
-        <InputText @input="setValue($event, 'age')" type="text" />
+        <InputText required @input="setValue($event, 'age')" type="text" />
       </div>
       <div id="right">
         <label for="name">Message</label>
-        <Textarea @input="setValue" autoResize rows="10" cols="25" />
+        <Textarea required @input="setValue" autoResize rows="10" cols="25" />
       </div>
       </div>
-      <Button class="btn"  @click="sendEmail" label="Send" />
+      <Button class="btn" type="submit" @click="sendEmail" label="Send" />
     </form>
   </div>
 </template>

@@ -2,6 +2,7 @@
 import { useRoute } from 'vue-router';
 import PurchaseBtn from '@/components/UI/PurchaseBtn.vue';
 import productsData from '@/data/products.json'
+import LastlyAdded from '@/components/LastlyAdded.vue';
 const products = productsData;
 
 const route = useRoute()
@@ -11,27 +12,29 @@ const currentProduct = products.filter(product => product.service_id === id)
 
 
 <template>
-  <div id="product-details">
-    <div id="discount">{{currentProduct[0].discount_percentages}}</div>
-    <img :src="currentProduct[0].images[0]" alt="">
-    <div id="product-info">
-      <h2 id="title">{{currentProduct[0].title}}</h2>
-      <h3><span class="label">Dealer:</span> {{currentProduct[0].dealer}}</h3>
-      <h3><span class="label">Service Type:</span> {{currentProduct[0].service_type}}</h3>
-      <h3 id="id-num"><span class="label">Артикулен номер №:</span>&nbsp;{{currentProduct[0].service_id}}</h3>
-      <div id="pricing" v-if="currentProduct[0].discount_percentages != 0">
-        <h2 id="onsale">{{ currentProduct[0].discount_price }}лв.</h2>
-        <h3 id="original-price"><span class="label">&nbsp;{{ currentProduct[0].price }}</span></h3>
-      </div>
-      <h3 v-else id="onsale">
-        {{ currentProduct[0].price }}лв.
-      </h3>
-      <div id="purchase">
-        <PurchaseBtn />
+  <section>
+    <div id="product-details">
+      <div id="discount">{{currentProduct[0].discount_percentages}}</div>
+      <img :src="currentProduct[0].images[0]" alt="">
+      <div id="product-info">
+        <h2 id="title">{{currentProduct[0].title}}</h2>
+        <h3><span class="label">Dealer:</span> {{currentProduct[0].dealer}}</h3>
+        <h3><span class="label">Service Type:</span> {{currentProduct[0].service_type}}</h3>
+        <h3 id="id-num"><span class="label">Артикулен номер №:</span>&nbsp;{{currentProduct[0].service_id}}</h3>
+        <div id="pricing" v-if="currentProduct[0].discount_percentages != 0">
+          <h2 id="onsale">{{ currentProduct[0].discount_price }}лв.</h2>
+          <h3 id="original-price"><span class="label">&nbsp;{{ currentProduct[0].price }}</span></h3>
+        </div>
+        <h3 v-else id="onsale">
+          {{ currentProduct[0].price }}лв.
+        </h3>
+        <div id="purchase">
+          <PurchaseBtn />
+        </div>
       </div>
     </div>
-
-  </div>
+    <LastlyAdded />
+  </section>
 </template>
 
 
@@ -60,7 +63,7 @@ const currentProduct = products.filter(product => product.service_id === id)
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    width: 120px;
+    width: 12npm0px;
   }
 
   #onsale {
