@@ -3,15 +3,19 @@ import CardItem from './UI/CardItem.vue';
 import steeringWheel from '../assets/accessories/steering-wheel.webp'
 import audiExterior from '../assets/accessories/audi_exterior.webp'
 import audiAddition from '../assets/accessories/addition.webp'
+const cardSpecific = {
+  subtitle: "Car Accessories",
+  btn: "Review",
+}
 </script>
 
 <template>
   <div id="categories">
   <h2>Categories</h2>
   <div id="card-collection">
-    <CardItem :img="steeringWheel" title="Interior" subtitle="Car Accessories" btn="Review" path="Interior"/>
-    <CardItem :img="audiExterior" title="Exterior" subtitle="Car Accessories" btn="Review"  path="Exterior"/>
-    <CardItem :img="audiAddition" title="Additional Stuff" subtitle="Car Accessories" btn="Review"  path="Interior"/>
+    <CardItem :img="steeringWheel" title="Interior" @v:bind="cardSpecific" path="Interior"/>
+    <CardItem :img="audiExterior" title="Exterior" @v:bind="cardSpecific"  path="Exterior"/>
+    <CardItem :img="audiAddition" title="Additional Stuff" @v:bind="cardSpecific"  path="Interior"/>
   </div>
 </div>
 </template>

@@ -5,7 +5,8 @@ export default (app) => {
     return "This is required";
   });
 
-  app.component("VeeForm", Form);
-  app.component("VeeField", Field);
-  app.component("VeeErrorMessage", ErrorMessage);
+  app
+    .component("VeeForm", Form)
+    .component("VeeField", Field)
+    .component("VeeErrorMessage", ErrorMessage);
 };

@@ -1,11 +1,12 @@
 <script setup>
 import Textarea from 'primevue/textarea';
 import Button from 'primevue/button';
+import emailjs from '@emailjs/browser';
 import { ref } from 'vue';
 
 const name = ref('')
 const email = ref('')
-const age = ref('')
+const subject = ref('')
 const message = ref('')
 
 function setValue(event, value) {
@@ -13,30 +14,40 @@ function setValue(event, value) {
     name.value = event.target.value
   } else if (value === 'email') {
     email.value = event.target.value
-  } else if (value === 'age') {
-    age.value = event.target.value
+  } else if (value === 'subject') {
+    subject.value = event.target.value
   } else {
     message.value = event.target.value
   }
 }
 
 function sendEmail(e) {
-  if (name.value && name.value.trim() || email.value && email.value.trim() ) {
-    console.log({
-    name: name.value,
-    email: email.value,
-    age: age.value,
-    message: message.value,
-  })
+  // if (name.value && name.value.trim() || email.value && email.value.trim() ) {
+  //   let params = {
+  //   name: name.value,
+  //   email: email.value,
+  //   subject: subject.value,
+  //   message: message.value,
+  // };
+  emailjs.sendForm('service_43e66zn', 'template_wu3pvfo', this.$refs.form, {
+      publicKey: 'ZNA6rCUzJJOCR6CQq',
+    })
+    .then(
+      () => {
+        console.log('SUCCESS!');
+      },
+      (error) => {
+        console.log('FAILED...', error);
+      },
+    );
   e.preventDefault()
   }
-}
 </script>
 
 <template>
   <div id="form-section">
     <h2>Send an Email</h2>
-    <VeeForm>
+    <VeeForm ref="form" @submit.prevent="sendEmail">
       <div id="form-inputs">
         <div id="left">
         <label for="name">Name</label>
@@ -45,16 +56,16 @@ function sendEmail(e) {
         <label for="email">Email</label>
         <VeeField name="email"  @input="setValue($event, 'email')" type="text" rules="required" />
         <VeeErrorMessage name="email" class="form-error" />
-        <label for="age">Age</label>
-        <VeeField name="age" @input="setValue($event, 'age')" type="text" rules="required" />
-        <VeeErrorMessage name="age" class="form-error" />
+        <label for="subject">Subject</label>
+        <VeeField name="subject" @input="setValue($event, 'subject')" type="text" rules="required" />
+        <VeeErrorMessage name="subject" class="form-error" />
       </div>
       <div id="right">
         <label for="name">Message</label>
         <Textarea @input="setValue" autoResize rows="10" cols="20" />
       </div>
       </div>
-      <Button class="btn" type="submit" @click="sendEmail" label="Send" />
+      <Button class="btn" type="submit" label="Send" />
     </VeeForm>
   </div>
 </template>

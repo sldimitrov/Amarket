@@ -116,7 +116,7 @@ const handleSearch = (search) => {
       align-items: center;
     }
     #filter {
-    width: 40%;
+    width: 50%;
     margin: 0;
     }
   }
