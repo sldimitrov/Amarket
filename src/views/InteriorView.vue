@@ -1,6 +1,6 @@
 <script setup>
 import ProductItem from '@/components/UI/ProductItem.vue';
-import InputText from 'primevue/inputtext';
+import FilterSearch from '@/components/UI/FilterSearch.vue';
 import jobData from '@/data/products.json'
 import { computed, ref } from 'vue';
 
@@ -28,12 +28,7 @@ const handleSearch = (search) => {
 
 <template>
   <div id="interior">
-    <section id="filter">
-      <div id="search">
-        <h3>Search</h3>
-        <InputText id="search-input" @input="handleSearch" type="text" />
-      </div>
-    </section>
+    <FilterSearch :handle-search="handleSearch" />
     <section id="products">
       <template v-if="filteredJobs.length">
         <div id="card" v-for="job in filteredJobs" :key="job.article_number">
@@ -46,7 +41,6 @@ const handleSearch = (search) => {
         </div>
       </template>
     </section>
-
   </div>
 </template>
 
@@ -57,33 +51,6 @@ const handleSearch = (search) => {
     margin-top: 20px;
     width: 100%;
     height: 100%
-  }
-
-  #filter {
-    display: flex;
-    justify-content: center;
-    width: 12%;
-    height: auto;
-    background: #f8f8f8;
-    border-radius: 10px;
-    margin-bottom: 25px;
-  }
-
-
-  #search {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 90px;
-  }
-
-  #empty-search {
-    text-align: center;
-  }
-
-  #search-input {
-    width: 90%;
   }
 
   #backup {
