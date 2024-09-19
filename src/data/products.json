@@ -1,0 +1,137 @@
+[
+  {
+    "service_id": "1",
+    "dealer": "Audi City Center",
+    "discount_percentages": 10,
+    "discount_price": 450,
+    "images": [
+      "https://hips.hearstapps.com/hmg-prod/images/2021-audi-a4-45-tfsi-quattro-104-1607927016.jpg?crop=0.450xw:0.380xh;0.226xw,0.399xh&resize=2048:*",
+      "https://www.coc-online.com/cdn/shop/files/ECCertificateofConformityAUDI.png?v=1701435816",
+      "https://cf-cdn-v6-api.audi.at/files/audi-service-bay.jpg"
+    ],
+    "price": 500,
+    "service_type": "Oil Change",
+    "duration_minutes": 60,
+    "title": "Audi Oil Change Service"
+  },
+  {
+    "service_id": "2",
+    "dealer": "Audi Downtown",
+    "discount_percentages": 5,
+    "discount_price": 950,
+    "images": [
+      "https://www.audi.ch/content/dam/nemo/ch/preislisten/img/Audi_A4_Avant.jpg",
+      "https://www.coc-online.com/cdn/shop/files/ECCertificateofConformityAUDI.png?v=1701435816",
+      "https://cf-cdn-v6-api.audi.at/files/audi-brake-service.jpg"
+    ],
+    "price": 1000,
+    "service_type": "Brake Service",
+    "duration_minutes": 120,
+    "title": "Audi Brake Service"
+  },
+  {
+    "service_id": "3",
+    "dealer": "Audi Service Hub",
+    "discount_percentages": 15,
+    "discount_price": 850,
+    "images": [
+      "https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHkCFmWIZWEtKi5LyGYFKApi4MnMT01P1swpS0_kZuRNNdFMrSnTzUnPz2YHSIjx5lT8_CHa6uZRdf2ioxPXh9Oa2Uk4GHpYaZbPrc3K2eq5VKvqXv0q1SyemjIHHYWdJvWdJo_UnhZPvb6WnhGu8kvvAwJNuk_VzTXj1AbPa9YcefzxSzaGpVszAI7Wwd0eaQmPSpOc_ay9d2F9Tyr5TlYFHX4vvQ6CKus2y6Re_btPL7o3clurHwPPq9rTF66Q498rlNr6obd7ALxOTvp-B53-ti0SagdxesZ3n_5zesFferlNSj4Hncc2BsJD-I35rRC2WnbR6-jJYbgcLA4-YzSTbl3PrT-xJLs47G3Tl9v17xw0ZeNLmH5Gd6-x4VSdp5omtuat_rtRwqmTgmfM-MLsjbuEtwaMq2iISnA-D33ydwsCj6pC478mxm0_2_w6uO9r4TuzshIvlDDw5FY8nG1Y9yuM4L6LYsqV_U8L10kIGniPVr0XmzdtdItN2fvUtp1SZDR9OeDHwxPalcj6Q69a5zsDbkamzKTqSzc4EaO7Td5wzoo6vaD76vPy2BnNwmqqqLgMP0wzvpkMic1n_zA4SuVP5_c9Mx_oUBp7MyxO23jr-pNpEOFGuuTHkYn53ViADj-blsMWlE8oF9FO8ZzZI_XulWXB3JgMrMHKZxIAECyOQ4NkKJDgWMoDIDFC064KIDBCfcQczAwNzC1C1DAMI8PGVFuUUJBYl5uolF-UX5AlqGBAJhFl9HCNdgwBq8JLwkAIAAA.png",
+      "https://www.coc-online.com/cdn/shop/files/ECCertificateofConformityAUDI.png?v=1701435816",
+      "https://cf-cdn-v6-api.audi.at/files/audi-maintenance-service.jpg"
+    ],
+    "price": 1000,
+    "service_type": "Maintenance Check",
+    "duration_minutes": 90,
+    "title": "Audi Full Maintenance Service"
+  },
+  {
+    "service_id": "4",
+    "dealer": "Audi City Center",
+    "discount_percentages": 8,
+    "discount_price": 920,
+    "images": [
+      "https://www.audicentremelbourne.com.au/content/dam/iph/international/au/general_assets/Models/A4/A4_Sedan/Stage/1920x600-A4-sedan-mirror-hero-image.png/jcr:content/renditions/cq5dam.thumbnail.720.406.iph.png?imwidth=720&imdensity=1",
+      "https://www.coc-online.com/cdn/shop/files/ECCertificateofConformityAUDI.png?v=1701435816",
+      "https://cf-cdn-v6-api.audi.at/files/audi-engine-service.jpg"
+    ],
+    "price": 1000,
+    "service_type": "Engine Service",
+    "duration_minutes": 180,
+    "title": "Audi Engine Check & Repair"
+  },
+  {
+    "service_id": "5",
+    "dealer": "Audi North",
+    "discount_percentages": 0,
+    "discount_price": 700,
+    "images": [
+      "https://imgd.aeplcdn.com/664x374/n/cw/ec/51909/a4-exterior-left-front-three-quarter-3.jpeg?q=80",
+      "https://www.coc-online.com/cdn/shop/files/ECCertificateofConformityAUDI.png?v=1701435816",
+      "https://cf-cdn-v6-api.audi.at/files/audi-tire-service.jpg"
+    ],
+    "price": 700,
+    "service_type": "Tire Replacement",
+    "duration_minutes": 45,
+    "title": "Audi Tire Replacement Service"
+  },
+  {
+    "service_id": "6",
+    "dealer": "Audi Downtown",
+    "discount_percentages": 12,
+    "discount_price": 1760,
+    "images": [
+      "https://www.carscoops.com/wp-content/uploads/2024/03/Audi-R8-Dead.jpg",
+      "https://www.coc-online.com/cdn/shop/files/ECCertificateofConformityAUDI.png?v=1701435816",
+      "https://cf-cdn-v6-api.audi.at/files/audi-transmission-service.jpg"
+    ],
+    "price": 2000,
+    "service_type": "Transmission Repair",
+    "duration_minutes": 240,
+    "title": "Audi Transmission Repair"
+  },
+  {
+    "service_id": "7",
+    "dealer": "Audi City Center",
+    "discount_percentages": 10,
+    "discount_price": 450,
+    "images": [
+      "https://hips.hearstapps.com/hmg-prod/images/2021-audi-a4-45-tfsi-quattro-104-1607927016.jpg?crop=0.450xw:0.380xh;0.226xw,0.399xh&resize=2048:*",
+      "https://www.coc-online.com/cdn/shop/files/ECCertificateofConformityAUDI.png?v=1701435816",
+      "https://cf-cdn-v6-api.audi.at/files/audi-service-bay.jpg"
+    ],
+    "price": 500,
+    "service_type": "Oil Change",
+    "duration_minutes": 60,
+    "title": "Audi Oil Change Service"
+  },
+  {
+    "service_id": "8",
+    "dealer": "Audi Downtown",
+    "discount_percentages": 5,
+    "discount_price": 950,
+    "images": [
+      "https://www.audi.ch/content/dam/nemo/ch/preislisten/img/Audi_A4_Avant.jpg",
+      "https://www.coc-online.com/cdn/shop/files/ECCertificateofConformityAUDI.png?v=1701435816",
+      "https://cf-cdn-v6-api.audi.at/files/audi-brake-service.jpg"
+    ],
+    "price": 1000,
+    "service_type": "Brake Service",
+    "duration_minutes": 120,
+    "title": "Audi Brake Service"
+  },
+  {
+    "service_id": "9",
+    "dealer": "Audi Service Hub",
+    "discount_percentages": 15,
+    "discount_price": 850,
+    "images": [
+      "https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHkCFmWIZWEtKi5LyGYFKApi4MnMT01P1swpS0_kZuRNNdFMrSnTzUnPz2YHSIjx5lT8_CHa6uZRdf2ioxPXh9Oa2Uk4GHpYaZbPrc3K2eq5VKvqXv0q1SyemjIHHYWdJvWdJo_UnhZPvb6WnhGu8kvvAwJNuk_VzTXj1AbPa9YcefzxSzaGpVszAI7Wwd0eaQmPSpOc_ay9d2F9Tyr5TlYFHX4vvQ6CKus2y6Re_btPL7o3clurHwPPq9rTF66Q498rlNr6obd7ALxOTvp-B53-ti0SagdxesZ3n_5zesFferlNSj4Hncc2BsJD-I35rRC2WnbR6-jJYbgcLA4-YzSTbl3PrT-xJLs47G3Tl9v17xw0ZeNLmH5Gd6-x4VSdp5omtuat_rtRwqmTgmfM-MLsjbuEtwaMq2iISnA-D33ydwsCj6pC478mxm0_2_w6uO9r4TuzshIvlDDw5FY8nG1Y9yuM4L6LYsqV_U8L10kIGniPVr0XmzdtdItN2fvUtp1SZDR9OeDHwxPalcj6Q69a5zsDbkamzKTqSzc4EaO7Td5wzoo6vaD76vPy2BnNwmqqqLgMP0wzvpkMic1n_zA4SuVP5_c9Mx_oUBp7MyxO23jr-pNpEOFGuuTHkYn53ViADj-blsMWlE8oF9FO8ZzZI_XulWXB3JgMrMHKZxIAECyOQ4NkKJDgWMoDIDFC064KIDBCfcQczAwNzC1C1DAMI8PGVFuUUJBYl5uolF-UX5AlqGBAJhFl9HCNdgwBq8JLwkAIAAA.png",
+      "https://www.coc-online.com/cdn/shop/files/ECCertificateofConformityAUDI.png?v=1701435816",
+      "https://cf-cdn-v6-api.audi.at/files/audi-maintenance-service.jpg"
+    ],
+    "price": 1000,
+    "service_type": "Maintenance Check",
+    "duration_minutes": 90,
+    "title": "Audi Full Maintenance Service"
+  }
+]

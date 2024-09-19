@@ -1,6 +1,10 @@
 <script setup>
 import carIn from '../assets/car-interior.jpg'
 import Button from 'primevue/button';
+
+function learnMoreScroll() {
+  window.scrollTo(50, 300)
+}
 </script>
 
 <template>
@@ -8,7 +12,7 @@ import Button from 'primevue/button';
     <img :src="carIn" style="">
     <div class="text-container">
       <h3>The Path to Sustainable Comfort</h3>
-      <Button id="learn-more-btn" label="Learn More" severity="secondary" />
+      <Button @click="learnMoreScroll" id="learn-more-btn" label="Learn More" severity="secondary" />
     </div>
   </div>
 </template>

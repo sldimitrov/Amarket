@@ -1,11 +1,13 @@
 <script setup>
-
+import HeaderElement from './components/HeaderElement.vue';
+import FooterLine from './components/FooterLine.vue';
 </script>
 
 <template>
   <div>
-    <header-element />
+    <HeaderElement />
     <router-view />
+    <FooterLine />
   </div>
 </template>
 
