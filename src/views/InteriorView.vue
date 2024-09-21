@@ -89,7 +89,7 @@ const handleSearch = (search) => {
   #backup {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     height: 800px;
     color: black;
   }
@@ -113,7 +113,7 @@ const handleSearch = (search) => {
   @media only screen and (max-width: 641px) {
     #interior {
       flex-direction: column;
-      align-items: start;
+      align-items: center;
     }
     #filter {
     width: 50%;
