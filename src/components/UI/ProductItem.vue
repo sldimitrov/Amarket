@@ -15,7 +15,7 @@ const props = defineProps(['item'])
     </template>
     <template #title><p class="card-text">{{item.title}}</p></template>
     <template #subtitle><p class="card-text">{{item.dealer}}</p></template>
-    <template #content><p class="card-text">{{item.price }}</p></template>
+    <template #content><p class="card-text">{{item.price }}лв.</p></template>
     <template #footer>
       <PurchaseBtn />
     </template>

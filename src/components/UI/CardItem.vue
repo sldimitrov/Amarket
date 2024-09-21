@@ -3,7 +3,7 @@ import Card from 'primevue/card';
 import Button from 'primevue/button'
 import { defineProps } from 'vue';
 
-const props = defineProps(['img', 'title', 'price', 'cardSpecific', 'path'])
+const props = defineProps(['img', 'title', 'price', 'path'])
 </script>
 
 <template>
@@ -12,15 +12,15 @@ const props = defineProps(['img', 'title', 'price', 'cardSpecific', 'path'])
         <img alt="user header" :src="img" />
     </template>
     <template #title><p class="card-text">{{props.title}}</p></template>
-    <template #subtitle><p class="card-text">{{cardSpecific.subtitle}}</p></template>
+    <template #subtitle><p class="card-text">Car Accessories</p></template>
     <template #content><p class="card-text">{{ props.price }}</p></template>
     <template #footer>
       <div id="btn-ctn" class="flex gap-4 mt-1">
-        <Button id="reviewBtn" class="w-full">
-          <router-link id="review-btn-txt" :to="{ name: props.path}">
-            {{cardSpecific.btn}}
-          </router-link>
-        </Button>
+        <router-link id="review-btn-txt" :to="{ name: props.path}">
+          <Button id="reviewBtn" class="w-full">
+            Review
+          </Button>
+        </router-link>
       </div>
     </template>
   </Card> 
@@ -58,8 +58,11 @@ const props = defineProps(['img', 'title', 'price', 'cardSpecific', 'path'])
   }
 
   #review-btn-txt {
+    display: flex;
+    justify-content: center;
     font-size: 18px;
     color: white;
+    width: 120px;
     text-decoration: none;
   }
   

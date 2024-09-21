@@ -14,8 +14,10 @@ const currentProduct = products.filter(product => product.service_id === id)
 <template>
   <section>
     <div id="product-details">
-      <div id="discount">{{currentProduct[0].discount_percentages}}</div>
-      <img :src="currentProduct[0].images[0]" alt="">
+      <figure>
+        <p v-if="currentProduct[0].discount_percentages > 0" id="discount">-{{currentProduct[0].discount_percentages}}%</p>
+        <img :src="currentProduct[0].images[0]" alt="">
+      </figure>
       <div id="product-info">
         <h2 id="title">{{currentProduct[0].title}}</h2>
         <h3><span class="label">Dealer:</span> {{currentProduct[0].dealer}}</h3>
@@ -51,7 +53,7 @@ const currentProduct = products.filter(product => product.service_id === id)
     display: flex;
     flex-direction: column;
     align-items: start;
-    margin-left: 10px;
+    margin-left: 15px;
   }
 
   #title {
@@ -66,6 +68,15 @@ const currentProduct = products.filter(product => product.service_id === id)
     width: 12npm0px;
   }
 
+  #discount {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(241, 93, 135);
+  }
+
   #onsale {
     font-size: 35px;
   }
@@ -73,6 +84,7 @@ const currentProduct = products.filter(product => product.service_id === id)
   #id-num {
     color: #337ab7;
   }
+
 
   #original-price {
     font-size: 23px;
@@ -91,10 +103,45 @@ const currentProduct = products.filter(product => product.service_id === id)
   img {
     max-width: 550px;
   }
+  
+  figure {
+    margin: 0px;
+  }
 
   h2, h3 {
     color: black;
     text-align: center;
     margin-bottom: 6px;
+  }
+  @media only screen and (max-width: 900px) {
+    #product-details {
+      flex-direction: column;
+      align-items: center;
+    }
+    #product-info {
+      align-items: center;
+    }
+  }
+  @media only screen and (max-width: 551px) {
+    img {
+      width: 100%;
+    };
+  }
+  @media only screen and (max-width: 430px) {
+    h2 {
+      font-size: 22px
+    }
+    h3 {
+      font-size: 16px
+    }
+    #onsale {
+      font-size: 20px;
+    }
+    #original-price {
+      font-size: 16px;
+    }
+    #discount {
+    font-size: 10px;
+    }
   }
 </style>
