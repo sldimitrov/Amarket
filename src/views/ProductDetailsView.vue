@@ -141,7 +141,7 @@ const currentProduct = products.filter(product => product.service_id === id)
       font-size: 16px;
     }
     #discount {
-    font-size: 10px;
+    font-size: 25px;
     }
   }
 </style>

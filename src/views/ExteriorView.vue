@@ -4,18 +4,20 @@
 
 <template>
   <section>
-    <h1>Exterior</h1>
+    <h1>Coming soon...</h1>
   </section>
 </template>
 
 <style scoped>
   section {
+    display: flex;
+    justify-content: center;
     background: black;
     box-shadow: 0 0 6 grey;
-    height: 600px;
+    height: 850px;
   }
   h1 {
-    color: black;
+    color: white;
     text-align: center;
   }
 </style>
