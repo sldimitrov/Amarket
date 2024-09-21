@@ -12,6 +12,9 @@ import Button from 'primevue/button';
 </template>
 
 <style scoped>
+  a {
+    text-decoration: none;
+  }
   #reviewBtn {
     height: 35px;
     width: 100%;
