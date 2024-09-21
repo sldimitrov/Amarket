@@ -113,7 +113,7 @@ const handleSearch = (search) => {
   @media only screen and (max-width: 641px) {
     #interior {
       flex-direction: column;
-      align-items: center;
+      align-items: start;
     }
     #filter {
     width: 50%;
