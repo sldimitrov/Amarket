@@ -3,8 +3,14 @@ import { useRoute } from 'vue-router';
 import PurchaseBtn from '@/components/UI/PurchaseBtn.vue';
 import productsData from '@/data/products.json'
 import LastlyAdded from '@/components/LastlyAdded.vue';
-const products = productsData;
+import scrollTop from '@/services/scrollTop';
+  import { onMounted } from 'vue';
+  onMounted(() => {
+  scrollTop()
+  }
+)
 
+const products = productsData;
 const route = useRoute()
 const id = route.params.id
 const currentProduct = products.filter(product => product.service_id === id)

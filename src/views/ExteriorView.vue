@@ -1,5 +1,10 @@
 <script setup>
-
+  import scrollTop from '@/services/scrollTop';
+  import { onMounted } from 'vue';
+  onMounted(() => {
+  scrollTop()
+  }
+)
 </script>
 
 <template>

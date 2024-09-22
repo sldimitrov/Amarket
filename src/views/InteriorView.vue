@@ -3,6 +3,12 @@ import ProductItem from '@/components/UI/ProductItem.vue';
 import InputText from 'primevue/inputtext';
 import jobData from '@/data/products.json'
 import { computed, ref } from 'vue';
+import scrollTop from '@/services/scrollTop';
+  import { onMounted } from 'vue';
+  onMounted(() => {
+  scrollTop()
+  }
+)
 
 const jobs = jobData;
 
@@ -46,7 +52,6 @@ const handleSearch = (search) => {
         </div>
       </template>
     </section>
-
   </div>
 </template>
 

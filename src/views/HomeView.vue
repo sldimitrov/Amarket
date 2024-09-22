@@ -3,6 +3,13 @@ import WelcomePhoto from '@/components/WelcomePhoto.vue';
 import CategoriesSection from '@/components/CategoriesSection.vue';
 import LastlyAdded from '@/components/LastlyAdded.vue';
 import ContactsUs from '@/components/ContactsUs.vue';
+import scrollTop from '@/services/scrollTop';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  scrollTop()
+  }
+)
 </script>
 
 <template>

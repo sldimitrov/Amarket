@@ -1,6 +1,12 @@
 <script setup>
   import ContactsUs from '@/components/ContactsUs.vue';
   import FormField from '@/components/UI/FormField.vue';
+  import scrollTop from '@/services/scrollTop';
+  import { onMounted } from 'vue';
+  onMounted(() => {
+  scrollTop()
+  }
+)
 </script>
 
 <template>
